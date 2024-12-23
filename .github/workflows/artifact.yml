@@ -39,6 +39,10 @@ jobs:
       - name: Install dependencies
         if: steps.cache.outputs.cache-hit != 'true'
         run: |
+          npm i electron
+          npm i electron-json-storage
+          npm i sweetalert2
+          npm i piscina
           npm install
 
       - name: Prep
